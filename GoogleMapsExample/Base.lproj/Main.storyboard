@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,21 +16,66 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nhập địa chỉ" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="iF7-mz-9y1">
+                                <rect key="frame" x="20" y="40" width="560" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="C5a-5e-Hvj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Vb9-R4-Ctf"/>
+                                </connections>
+                            </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Qr-Cc-U6k" customClass="GMSMapView">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="80" width="600" height="520"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oQe-KE-aWw">
+                                        <rect key="frame" x="512" y="462" width="80" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="1AF-Vv-xcQ"/>
+                                            <constraint firstAttribute="width" constant="80" id="O1R-q1-9Kk"/>
+                                        </constraints>
+                                        <state key="normal" title="zoom in"/>
+                                        <connections>
+                                            <action selector="zoomInTap" destination="BYZ-38-t0r" eventType="touchUpInside" id="kpN-QU-P9h"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FSe-2P-psL">
+                                        <rect key="frame" x="8" y="462" width="80" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="QKQ-wg-ZbT"/>
+                                            <constraint firstAttribute="height" constant="50" id="oXL-y1-EdI"/>
+                                        </constraints>
+                                        <state key="normal" title="zoom out"/>
+                                        <connections>
+                                            <action selector="zoomOutTap" destination="BYZ-38-t0r" eventType="touchUpInside" id="fp8-VH-kCg"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="oQe-KE-aWw" secondAttribute="bottom" constant="8" id="0s6-br-LlK"/>
+                                    <constraint firstItem="FSe-2P-psL" firstAttribute="leading" secondItem="3Qr-Cc-U6k" secondAttribute="leading" constant="8" id="EhF-0A-uOl"/>
+                                    <constraint firstAttribute="trailing" secondItem="oQe-KE-aWw" secondAttribute="trailing" constant="8" id="IXv-jl-5yD"/>
+                                    <constraint firstAttribute="bottom" secondItem="FSe-2P-psL" secondAttribute="bottom" constant="8" id="Qqd-wM-BNv"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="iF7-mz-9y1" secondAttribute="trailing" constant="20" id="It5-xk-T8i"/>
+                            <constraint firstItem="iF7-mz-9y1" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="POW-Jp-pVV"/>
                             <constraint firstItem="3Qr-Cc-U6k" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="QFg-U6-sAP"/>
+                            <constraint firstItem="iF7-mz-9y1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="Rd1-eP-DaV"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="3Qr-Cc-U6k" secondAttribute="bottom" id="qSe-st-0Vq"/>
                             <constraint firstAttribute="trailing" secondItem="3Qr-Cc-U6k" secondAttribute="trailing" id="rGy-B1-lUC"/>
-                            <constraint firstItem="3Qr-Cc-U6k" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="xRE-Xw-hp2"/>
+                            <constraint firstItem="3Qr-Cc-U6k" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="80" id="xRE-Xw-hp2"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="mapView" destination="3Qr-Cc-U6k" id="HBI-XQ-aEb"/>
+                        <outlet property="tfSearch" destination="iF7-mz-9y1" id="UIV-jJ-gwM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

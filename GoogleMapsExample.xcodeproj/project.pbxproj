@@ -12,6 +12,9 @@
 		91BEE5551BDDE69D00FC0A66 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91BEE5531BDDE69D00FC0A66 /* Main.storyboard */; };
 		91BEE5571BDDE69D00FC0A66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91BEE5561BDDE69D00FC0A66 /* Assets.xcassets */; };
 		91BEE55A1BDDE69D00FC0A66 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91BEE5581BDDE69D00FC0A66 /* LaunchScreen.storyboard */; };
+		91F804B11C056BD300AC56C1 /* GGMapsApiHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F804B01C056BD300AC56C1 /* GGMapsApiHelper.swift */; };
+		91F804B31C056D3900AC56C1 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F804B21C056D3900AC56C1 /* SwiftyJSON.swift */; };
+		91F804B51C056D5700AC56C1 /* Dictionary+Exts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F804B41C056D5700AC56C1 /* Dictionary+Exts.swift */; };
 		BEE7196F4747752CBEEF37B5 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FBA7511FEB60737D32BBB35B /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +28,9 @@
 		91BEE5591BDDE69D00FC0A66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		91BEE55B1BDDE69D00FC0A66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91BEE5611BDDFAC500FC0A66 /* GoogleMapsExample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GoogleMapsExample-Bridging-Header.h"; sourceTree = "<group>"; };
+		91F804B01C056BD300AC56C1 /* GGMapsApiHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GGMapsApiHelper.swift; sourceTree = "<group>"; };
+		91F804B21C056D3900AC56C1 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		91F804B41C056D5700AC56C1 /* Dictionary+Exts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+Exts.swift"; sourceTree = "<group>"; };
 		F6A98261B38552DEDA0AED7A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		FBA7511FEB60737D32BBB35B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -79,6 +85,9 @@
 		91BEE54E1BDDE69D00FC0A66 /* GoogleMapsExample */ = {
 			isa = PBXGroup;
 			children = (
+				91F804B41C056D5700AC56C1 /* Dictionary+Exts.swift */,
+				91F804B21C056D3900AC56C1 /* SwiftyJSON.swift */,
+				91F804B01C056BD300AC56C1 /* GGMapsApiHelper.swift */,
 				91BEE54F1BDDE69D00FC0A66 /* AppDelegate.swift */,
 				91BEE5511BDDE69D00FC0A66 /* ViewController.swift */,
 				91BEE5531BDDE69D00FC0A66 /* Main.storyboard */,
@@ -196,8 +205,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91F804B51C056D5700AC56C1 /* Dictionary+Exts.swift in Sources */,
 				91BEE5521BDDE69D00FC0A66 /* ViewController.swift in Sources */,
+				91F804B11C056BD300AC56C1 /* GGMapsApiHelper.swift in Sources */,
 				91BEE5501BDDE69D00FC0A66 /* AppDelegate.swift in Sources */,
+				91F804B31C056D3900AC56C1 /* SwiftyJSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
